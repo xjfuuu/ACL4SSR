@@ -1,10 +1,13 @@
 🎉船新项目：[ACL4SSR Mannix 订阅转换极速版](https://github.com/zsokami/cvt)
 
+## 自定义去除国家和地区订阅
+https://raw.githubusercontent.com/xjfuuu/ACL4SSR/custom/ACL4SSR_Online_Mannix_custom.ini
+
 ## ACL4SSR_Online_Full_Mannix.ini
 
 自定义 订阅转换 配置转换 规则转换 的远程配置：
 
-https://raw.githubusercontent.com/zsokami/ACL4SSR/main/ACL4SSR_Online_Full_Mannix.ini
+https://raw.githubusercontent.com/xjfuuu/ACL4SSR/custom/ACL4SSR_Online_Full_Mannix.ini
 
 修改自 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini
 
@@ -12,90 +15,43 @@ https://raw.githubusercontent.com/zsokami/ACL4SSR/main/ACL4SSR_Online_Full_Manni
 
 订阅转换短链（原订阅链接需 URL 编码）：
 
-- `https://mnnx.cc/v1?url={原订阅链接}` (api.v1.mk)
-- `https://mnnx.cc/2c?url={原订阅链接}` (api.2c.lol)
+- `https://mnnx.cc/v1?url={原订阅链接}` (url.v1.mk)
+- `https://mnnx.cc/dler?url={原订阅链接}` (api.dler.io)
+- `https://mnnx.cc/id9?url={原订阅链接}` (sub.id9.cc)
 - `https://mnnx.cc/0z?url={原订阅链接}` (api-suc.0z.gs)
-- `https://mnnx.cc/{自定义后端地址}?url={原订阅链接}`
+- `https://max.mnnx.cc/{自定义后端地址}?url={原订阅链接}`
 
-订阅转换反代（自动去除无节点的分组等功能，项目地址：<https://github.com/zsokami/subcvt-mannix>）：
+订阅转换反代（自动去除无节点的分组等功能，项目地址：<https://github.com/xjfuuu/subcvt-mannix>）：
 
-`https://sc.mnnx.cc/{原订阅链接}`
+`https://sc.mnnx.cc/?url={原订阅链接}`
 
 ## ACL4SSR_Online_Mannix.ini
 
 去除国家/地区：
 
-https://raw.githubusercontent.com/zsokami/ACL4SSR/main/ACL4SSR_Online_Mannix.ini
+https://raw.githubusercontent.com/xjfuuu/ACL4SSR/custom/ACL4SSR_Online_Mannix.ini
 
-远程配置短链：`https://min.mnnx.cc/config`
+远程配置短链：`https://mnnx.cc/config-nc`
 
 订阅转换短链（原订阅链接需 URL 编码）：
 
-- `https://min.mnnx.cc/v1?url={原订阅链接}` (api.v1.mk)
-- `https://min.mnnx.cc/2c?url={原订阅链接}` (api.2c.lol)
-- `https://min.mnnx.cc/0z?url={原订阅链接}` (api-suc.0z.gs)
+- `https://mnnx.cc/v1-nc?url={原订阅链接}` (url.v1.mk)
+- `https://mnnx.cc/dler-nc?url={原订阅链接}` (api.dler.io)
+- `https://mnnx.cc/id9-nc?url={原订阅链接}` (sub.id9.cc)
+- `https://mnnx.cc/0z-nc?url={原订阅链接}` (api-suc.0z.gs)
 - `https://min.mnnx.cc/{自定义后端地址}?url={原订阅链接}`
-
-## ACL4SSR_Online_(Full_)Mannix_No_DNS_Leak.ini
-
-无 DNS 泄漏：
-
-https://raw.githubusercontent.com/zsokami/ACL4SSR/main/ACL4SSR_Online_Full_Mannix_No_DNS_Leak.ini
-
-- `https://ndl.mnnx.cc/config`
-- `https://ndl.mnnx.cc/v1?url={原订阅链接}` (api.v1.mk)
-- `https://ndl.mnnx.cc/2c?url={原订阅链接}` (api.2c.lol)
-- `https://ndl.mnnx.cc/0z?url={原订阅链接}` (api-suc.0z.gs)
-- `https://ndl.mnnx.cc/{自定义后端地址}?url={原订阅链接}`
-
-https://raw.githubusercontent.com/zsokami/ACL4SSR/main/ACL4SSR_Online_Mannix_No_DNS_Leak.ini
-
-- `https://minndl.mnnx.cc/config`
-- `https://minndl.mnnx.cc/v1?url={原订阅链接}` (api.v1.mk)
-- `https://minndl.mnnx.cc/2c?url={原订阅链接}` (api.2c.lol)
-- `https://minndl.mnnx.cc/0z?url={原订阅链接}` (api-suc.0z.gs)
-- `https://minndl.mnnx.cc/{自定义后端地址}?url={原订阅链接}`
-
-和原配置只有一行差异：
-
-```diff
-- ruleset=🛩️ ‍墙内,[]GEOIP,CN
-+ ruleset=🛩️ ‍墙内,[]GEOIP,CN,no-resolve
-```
-
-原配置不在已知名单中的（国内外）域名会先通过当地 DNS 服务器解析一次。
-
-添加 no-resolve 后，不在已知名单中的（国内外）域名将直接✈️ 起飞。
-
----
-
-### 性能优化 2
-
-🎉船新项目：[ACL4SSR Mannix 订阅转换极速版](https://github.com/zsokami/cvt)
-
-后端：`https://arx.cc/{原订阅链接}`
-
-前端：<https://sub.com.mp>
-
-### 性能优化 1
-
-原版订阅转换后端使用本配置时，若节点过多，转换速度很慢。
-
-建议使用性能优化后端（<https://github.com/zsokami/subconverter>，暂无公共服务）
-
-该后端通过预编译和缓存正则，大幅提升转换速度。
 
 ---
 
 ### V3
 
-添加某些影视/动漫 APP 广告拦截规则：
+扩展 APP 广告拦截规则，对某些影视/动漫 APP 有加速奇效：
 
-https://raw.githubusercontent.com/zsokami/ACL4SSR/main/BanProgramAD1.list
+https://raw.githubusercontent.com/xjfuuu/ACL4SSR/custom/BanProgramAD1.list
 
 附 hosts 文件（自动更新）：
 
-https://raw.githubusercontent.com/zsokami/ACL4SSR/main/hosts
+https://raw.githubusercontent.com/xjfuuu/ACL4SSR/custom/hosts
 
 ---
 
@@ -105,7 +61,7 @@ https://raw.githubusercontent.com/zsokami/ACL4SSR/main/hosts
 
 **需去除订阅转换链接中的参数 `emoji=true/false` 才能生效**，参考例子：
 
-`https://api.dler.io/sub?target=clash&udp=true&scv=true&config=https://raw.githubusercontent.com/zsokami/ACL4SSR/main/ACL4SSR_Online_Full_Mannix.ini&url={原订阅链接}`
+`https://api.dler.io/sub?target=clash&udp=true&scv=true&config=https://raw.githubusercontent.com/xjfuuu/ACL4SSR/custom/ACL4SSR_Online_Full_Mannix.ini&url={原订阅链接}`
 
 ---
 
@@ -152,8 +108,6 @@ url-test
 - 间隔时间 300秒 -> 15/30秒
 - 容差 50/150毫秒 -> 100/300毫秒
 
-正则匹配大小写、简繁体，更好地匹配中转、IPLC节点
+正则匹配大小写、简繁体，更好的匹配中转、IPLC节点
 
 LocalAreaNetwork.list 使用 DIRECT
-
-移除 Download.list
