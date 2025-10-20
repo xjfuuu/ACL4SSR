@@ -1,8 +1,7 @@
 name: update_hosts.py
 on:
   workflow_dispatch:
-  schedule:
-    - cron: 0 15 * * *
+  push:
 permissions: write-all
 jobs:
   main:
