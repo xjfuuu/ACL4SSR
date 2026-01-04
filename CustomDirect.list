@@ -55,3 +55,5 @@ DOMAIN-SUFFIX,zhuanspirit.com
 DOMAIN-SUFFIX,zhuanzhuan.com
 DOMAIN-SUFFIX,58os.org
 DOMAIN-SUFFIX,58dns.org
+# 直连列表
+DOMAIN-SUFFIX,bing.com
