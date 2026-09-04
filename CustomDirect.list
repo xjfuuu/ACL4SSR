@@ -57,3 +57,4 @@ DOMAIN-SUFFIX,58os.org
 DOMAIN-SUFFIX,58dns.org
 # 直连列表
 DOMAIN-SUFFIX,bing.com
+IP-CIDR,43.163.247.189/32,no-resolve
