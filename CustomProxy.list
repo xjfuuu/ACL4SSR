@@ -1,0 +1,9 @@
+# NAME: 58TongCheng
+# AUTHOR: blackmatrix7
+# GITHUB: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2021-03-11 02:46:21.270825
+# DOMAIN-SUFFIX: 49
+# TOTAL: 49
+# 代理列表
+DOMAIN-SUFFIX,google.com
+IP-CIDR,43.163.247.189/32,no-resolve
