@@ -6,4 +6,4 @@
 # TOTAL: 49
 # 代理列表
 DOMAIN-SUFFIX,google.com
-IP-CIDR,43.163.247.189/32,no-resolve
+#IP-CIDR,43.163.247.189/32,no-resolve
